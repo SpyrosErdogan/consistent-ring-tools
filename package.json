@@ -1,0 +1,17 @@
+{
+  "name": "consistent-ring-tools",
+  "version": "0.1.0",
+  "description": "A consistent hashing ring that uses virtual nodes to spread keys evenly.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}
