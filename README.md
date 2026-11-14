@@ -32,3 +32,10 @@ small clusters without wasting much memory.
 An empty ring returns `undefined` from `getNode` and `[]` from `getNodes`.
 Callers must handle that case before using the result as a key. Adding a node
 that is already present is a no-op, so replaying a membership list is safe.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
